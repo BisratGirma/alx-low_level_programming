@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* Displaying sizes of c types */
+/**
+ * main - Displaying sizes of c types
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
