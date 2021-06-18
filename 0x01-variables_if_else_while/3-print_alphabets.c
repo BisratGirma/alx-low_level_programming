@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main displays alphabet in lower and upper with for
+ * main - displays alphabet in lower and upper with for
  *
  * Return: Always 0.
  */
