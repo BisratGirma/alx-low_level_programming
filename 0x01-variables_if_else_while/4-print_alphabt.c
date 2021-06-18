@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main displays lowers without a and e 
+ * main - displays lowers without a and e
  *
  * Return: Always 0.
  */

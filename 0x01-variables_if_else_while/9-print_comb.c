@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - display single digit 
+ * main - display single digit
  *
  * Return: Always 0.
  */
