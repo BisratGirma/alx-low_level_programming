@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * 
- * positive, zero, or negative.
+ * main - positive, zero, or negative.
  *
  * Return: Always 0.
  */

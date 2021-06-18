@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main check if a number is greater, less to 5,
+ * main - check if a number is greater, less to 5,
  * equal to 0, or lesser than 6 and not 0.
  *
  * Return: Always 0.

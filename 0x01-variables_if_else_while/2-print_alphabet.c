@@ -1,7 +1,6 @@
 #include <stdio.h>
-
 /**
- * main displays all lowercase characters using putchar method 
+ * main - displays all lowercase characters using putchar method
  *
  * Return: Always 0.
  */
