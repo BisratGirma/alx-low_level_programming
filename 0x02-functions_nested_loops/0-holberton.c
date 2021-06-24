@@ -6,8 +6,8 @@
  * Return: Always 0.
  */
 
-void main(void)
+int main(void)
 {
-	putchar("Holberton\n");
-	return;
+	_putchar("Holberton\n");
+	return (0);
 }
