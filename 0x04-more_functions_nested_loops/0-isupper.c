@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _issupper -check if a character is capital
+ * _isupper -check if a character is capital
  * @c: a character to be tested
  * Return: 1 if uppercase, and 0 if not
  */
