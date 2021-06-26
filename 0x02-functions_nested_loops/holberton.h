@@ -3,5 +3,5 @@
 
 #include <stdio.h>
 
-_putchar();
+int _putchar(char c);
 #endif
