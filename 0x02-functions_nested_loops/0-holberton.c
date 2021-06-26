@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	_putchar('Holberton\n');
+	_putchar('H');
 	_putchar('o');
 	_putchar('l');
 	_putchar('b');
