@@ -2,8 +2,8 @@
 
 /**
  * print_last_digit - checks number
- * @j: a specified integer 
- * Return: returns an integer i 
+ * @j: a specified integer
+ * Return: returns an integer i
  */
 int print_last_digit(int j)
 {
