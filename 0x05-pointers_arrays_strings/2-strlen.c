@@ -1,15 +1,16 @@
 #include "holberton.h"
 
 /**
- * _strlen - prints the number of character string has
- * @str: a string variable.
- * Return: Length of the variable string.
+ * _strlen - calculate the number of character @s has
+ * @s: a string variable.
+ *
+ * Return: Length of the variable @s string.
  */
 int _strlen(char *s)
 {
 	int i = 0;
-	
-	while(*s++)
-	       i++;
+
+	while (*s++)
+		i++;
 	return (i);
-}	
+}
