@@ -1,13 +1,16 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
  * main - generates a random 12 character password
  *
  * return: generated password.
  */
-char main()
+const char * main()
 {
+	srand((unsigned int)(time(NULL)));
+
 	int i;
 	char p[12];
 
@@ -17,5 +20,5 @@ char main()
 		p[i] = pchar;
 	}
 
-	return (p);
+	printf("%s" , p);
 }
