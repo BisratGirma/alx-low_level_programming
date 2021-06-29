@@ -1,25 +1,25 @@
-#include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - generates a random 12 character password
+ * main - Program that generates random valid passwords
+ * @void: Empty input
  *
- * return: generated password.
+ * Return: 0 if works
  */
 int main(void)
-{
-	srand((unsigned int)(time(NULL)));
+{	
+	int i = 0, random, checksum;
 
-	int i;
-
-	char p[10];
-
-	for (i = 0; i < 10; i++)
-	{
-		char pchar = '0' + (rand() % 9);
-		p[i] = pchar;
-	}
-
-	printf("%s" , p);
+	srand(time(NULL));	
+	checksum = 2772;	
+	while (checksum > 122)	
+	{		
+		random = (rand() % 100);		
+		printf("%c", random);		
+		checksum -= random;		
+		i++;	
+	}	
+	printf("%c", checksum);	
+	return (0);
 }
