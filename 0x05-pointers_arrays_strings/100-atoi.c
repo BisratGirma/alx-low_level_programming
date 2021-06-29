@@ -11,18 +11,30 @@ int _atoi(char *s)
 {
 	int r = 0;
 
-	int sign = 1;
+	int sign = -1;
 
 	int i = 0;
 
-	if (s[0] == '-')
+	for (; s[i] != '\0'; i++)
 	{
-		sign = -1;
-		i++;
+
+		if (s[i] == '-')
+		{
+			sign *= -1;
+		}
+
+		if (s[i] >= 48 && s[i] <= 57)
+		{
+			if (r < 0)
+				r = (r * 10) - (s[i] - '0');
+			else
+				r = (s[i] - '0') * -1;
+
+			if (s[i + 1] < 48 || s[i + 1] > 57)
+				break;
+		}
 	}
-
-	for (; s[i] != '\0'; ++i)
-		r = r * 10 + s[i] - '0';
-
-	return sign * r;
+	 if (sign < 0)
+		r *= -1;
+	return (r);
 }
