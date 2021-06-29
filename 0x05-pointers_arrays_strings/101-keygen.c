@@ -7,16 +7,16 @@
  *
  * return: generated password.
  */
-const char * main()
+int main()
 {
 	srand((unsigned int)(time(NULL)));
 
 	int i;
-	char p[12];
+	char p[10];
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 10; i++)
 	{
-		char pchar = ' ' + (rand() % 94);
+		char pchar = '0' + (rand() % 9);
 		p[i] = pchar;
 	}
 
