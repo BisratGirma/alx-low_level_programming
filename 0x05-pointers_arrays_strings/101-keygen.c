@@ -7,11 +7,12 @@
  *
  * return: generated password.
  */
-int main()
+int main(void)
 {
 	srand((unsigned int)(time(NULL)));
 
 	int i;
+
 	char p[10];
 
 	for (i = 0; i < 10; i++)
