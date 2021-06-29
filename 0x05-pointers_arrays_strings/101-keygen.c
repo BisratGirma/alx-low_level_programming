@@ -6,9 +6,8 @@
  *
  * return: generated password.
  */
-int main()
+char main()
 {
-	srand((char)(time(NULL)));
 	int i;
 	char p[12];
 
