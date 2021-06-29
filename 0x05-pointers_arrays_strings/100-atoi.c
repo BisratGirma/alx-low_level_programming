@@ -1,12 +1,11 @@
 #include "holberton.h"
 
 /**
- * atoi - converts a string to integer
+ * _atoi - converts a string to integer
  * @s: a string variable
  *
- * return: a converted integer
+ * return: a converted string to integer.
  */
-
 int _atoi(char *s)
 {
 	int r = 0;
@@ -34,7 +33,7 @@ int _atoi(char *s)
 				break;
 		}
 	}
-	 if (sign < 0)
+	if (sign < 0)
 		r *= -1;
 	return (r);
 }
