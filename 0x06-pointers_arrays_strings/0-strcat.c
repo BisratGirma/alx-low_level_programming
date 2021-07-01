@@ -2,8 +2,8 @@
 
 /**
  * _strcat - merges two strings.
- * @dest: the first integer.
- * @src: the second integer.
+ * @dest: the first string.
+ * @src: the second string.
  *
  * Return: a merged string.
  */
