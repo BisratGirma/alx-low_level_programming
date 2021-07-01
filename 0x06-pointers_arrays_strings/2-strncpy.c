@@ -4,7 +4,7 @@
  * _strncpy - copies the content of a string to other.
  * @src: the first integer to be copied
  * @dest: the second integer that copies the value of @dest
- *
+ * @n: number of characters to be copied.
  * Return: a copied value
  */
 char *_strncpy(char *dest, char *src, int n)
