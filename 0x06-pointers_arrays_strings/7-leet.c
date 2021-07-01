@@ -20,7 +20,7 @@ char *leet(char *str)
 		mappings['t' - 'a'] = mappings['T' - 'A' + 26] = '7';
 		mappings['l' - 'a'] = mappings['L' - 'A' + 26] = '1';
 	}
-	
+
 	for (i = 0; *(str + i) != '\0'; i++)
 	{
 		int is_lower = *(str + i) >= 'a' && *(str + i) <= 'z';
