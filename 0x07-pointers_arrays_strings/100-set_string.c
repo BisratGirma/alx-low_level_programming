@@ -16,5 +16,5 @@ void set_string(char **s, char *to)
 
 	for (k = 0; k < 2; k++)
 		*(s + i + k) = (to + 3);
-	
+
 }
