@@ -1,25 +1,17 @@
 #include "holberton.h"
 
+void printer(char *s, int i);
+
 /**
  * _print_rev_recursion - print a string in reverse
  * @s: a string to be reverse printed.
  */
 void _print_rev_recursion(char *s)
 {
-	int i;
-
-	for (i = 0; *(s + i) != '\0'; i++)
-		i++;
-	printer(s, i);
-}
-
-void printer(char *s, int i)
-{
-	if (i < 0)
-		return;
-
-	_putchar(*(s + i));
-	i++;
-	printer(s + i);
+	if (*s)
+	{
+		_print_rev_recursion(s + 1);
+			_putchar(*s);
+	}
 }
 
