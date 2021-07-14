@@ -2,6 +2,8 @@
 
 /**
  * main - prints the number of arguments passed to it
+ * @argc: number of execution arguments passed
+ * @argv: void.
  *
  * Return: Always 0.
  */
