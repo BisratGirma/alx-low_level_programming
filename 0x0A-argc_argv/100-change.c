@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+
 /**
  * main - main to print contents of argv
  * @argc: number of commands
@@ -15,29 +16,33 @@ int main(int argc, char **argv)
 	int changes[] = {25, 10, 5, 2, 1};
 	int total = 0;
 
-	amount = atoi(argv[1]);
-	if (argc > 2 || argc == 1)
+	if (argc == 2)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	else if (amount <= 0)
-	{
-		printf("0\n");
-	}
-	else
-	{
-		for (i = 0; i < 5; i++)
+		amount = atoi(argv[1]);
+
+		if (amount <= 0)
 		{
-			if (amount >= changes[i])
+			printf("0\n");
+		}
+		else
+		{
+			for (i = 0; i < 5; i++)
 			{
-				coin = amount / changes[i];
-				rem = amount % changes[i];
-				amount = rem;
-				total += coin;
+				if (amount >= changes[i])
+				{
+					coin = amount / changes[i];
+					rem = amount % changes[i];
+					amount = rem;
+					total += coin;
+				}
 			}
 		}
 		printf("%d\n", total);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
