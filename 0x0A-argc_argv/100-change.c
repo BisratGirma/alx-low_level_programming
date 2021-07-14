@@ -1,75 +1,43 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 /**
- * coin_counter - count how many coins needed
- * @n: cents
- * Return: coins
- */
-
-int coin_counter(int n)
-{
-	int coins = 0;
-
-	while (n)
-	{
-		if (n >= 25)
-		{
-			n -= 25;
-			coins++;
-			continue;
-		}
-		if (n >= 10)
-		{
-			n -= 10;
-			coins++;
-			continue;
-		}
-		if (n >= 5)
-		{
-			n -= 5;
-			coins++;
-			continue;
-		}
-		if (n >= 2)
-		{
-			n -= 2;
-			coins++;
-			continue;
-		}
-		if (n >= 1)
-		{
-			n -= 1;
-			coins++;
-			continue;
-		}
-	}
-	return (coins);
-}
-
-/**
- * main - prints the minimum number of coins
- *        to make change for an amount of money.
- * @argc: number of arguments.
- * @argv: argumnets list.
- * Return: Always 0.
+ * main - main to print contents of argv
+ * @argc: number of commands
+ * @argv: command strings entered
+ *
+ * Return: 0
  */
 int main(int argc, char **argv)
 {
-	int n;
+	int amount, i, coin, rem;
+	int changes[] = {25, 10, 5, 2, 1};
+	int total = 0;
 
-	if (argc != 2)
+	amount = atoi(argv[1]);
+	if (argc > 2 || argc == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	n = atoi(argv[1]);
-	if (n < 0)
+	else if (amount <= 0)
 	{
 		printf("0\n");
-		exit(EXIT_SUCCESS);
 	}
-
-	printf("%d\n", coin_counter(n));
-	exit(EXIT_SUCCESS);
-
+	else
+	{
+		for (i = 0; i < 5; i++)
+		{
+			if (amount >= changes[i])
+			{
+				coin = amount / changes[i];
+				rem = amount % changes[i];
+				amount = rem;
+				total += coin;
+			}
+		}
+		printf("%d\n", total);
+	}
+	return (0);
 }
