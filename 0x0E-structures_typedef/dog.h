@@ -1,6 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 
+/**
+ * struct dog - a dogs characterstics.
+ * @name: name of the dog
+ * @age: age
+ * @owner: owner of the dog.
+ */
 struct dog
 {
 	char *name;
