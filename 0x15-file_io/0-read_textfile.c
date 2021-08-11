@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	while ((read(fd, &c, sizeof(c))) > 0)
 	{
-		if (bytes > letters)
+		if (bytes >= letters)
 			break;
 		printf("%c", c);
 		bytes++;
