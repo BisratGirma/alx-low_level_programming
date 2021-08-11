@@ -12,13 +12,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char c;
 	size_t bytes = 0;
-	int fd = open(filename, O_RDONLY);
+	int i, fd = open(filename, O_RDONLY);
 
-	if (fd == -1)
-	{
-		return (-1);
-	}
-	while ((read(fd, &c, sizeof(c))) > 0)
+	if (fd == -1 || *filename == NULL)
+		return (0);
+
+	while ((i = read(fd, &c, sizeof(c))) > 0)
 	{
 		if (bytes >= letters)
 			break;
@@ -26,5 +25,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		bytes++;
 	}
 	close(fd);
-	return (bytes);
+	if (i == -1)
+		return (0);
+	else
+		return (bytes);
 }
