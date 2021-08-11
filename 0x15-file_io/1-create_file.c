@@ -9,6 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
+	ssize_t r;
 	int i = 0, fd = open(filename, O_CREAT | O_RDWR);
 
 	if (fd == -1)
@@ -21,7 +22,10 @@ int create_file(const char *filename, char *text_content)
 		i++;
 		text_content++;
 	}
-	write(fd, text_content, i);
+	r = write(fd, text_content, i);
 	close(fd);
-	return (1);
+	if (r == -1)
+		return (-1);
+	else
+		return (1);
 }
